@@ -1,0 +1,20 @@
+.cardHomePage {
+    display: block;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 366px;
+    height: 336px;
+}
+
+.btnCard {
+    background-color: white;
+    opacity: 0.7;
+    width: inherit;
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    font-family: 'book', Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: black;
+    padding: 5px 0px 7px 20px;
+}

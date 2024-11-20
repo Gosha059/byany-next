@@ -1,0 +1,10 @@
+.showcase {
+    margin-top: 70px;
+}
+.imgMain {
+    height: 700px;
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    display: block;
+}
