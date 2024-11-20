@@ -1,6 +1,6 @@
 import Link from "next/link"
 import styles from "./card-template.module.css"
-import { Card } from "react-bootstrap"
+
 
 export default function CardTemplate () {
     return (

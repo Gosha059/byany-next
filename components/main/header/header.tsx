@@ -1,6 +1,6 @@
 import Logo from "./logo/logo"
 import MainNav from "./main-nav/main-nav"
-import { Container, Navbar } from "react-bootstrap"
+
 
 
 const nav = {
@@ -17,19 +17,17 @@ const nav = {
 export default function Header(): any {
     return(
         <header>
-            <Navbar 
+            <div 
             id={nav.id} 
             style={nav.style} 
             className={nav.classes} 
-            expand="lg" 
-            bg="light" 
-            fixed="top" 
+           
             >
-                <Container fluid>
+                <div>
                     <Logo/>
                     <MainNav/>
-                </Container>
-            </Navbar>
+                </div>
+            </div>
         </header>
     )
 }
