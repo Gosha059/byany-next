@@ -1,9 +1,5 @@
-"use client"
-
 
 import Link from "next/link";
-import { useState } from "react";
-import { NavDropdown, Nav } from "react-bootstrap";
 
 
 type GeneralMenuProps = {
@@ -12,46 +8,38 @@ type GeneralMenuProps = {
     };
 };
 
-
 export default function GeneralMenu ({data}: GeneralMenuProps) {
-    const [show, setShow] = useState<string | null>(null);
-    function showMenu (category:string, items:string[]){
-        return items.length>0? setShow(category): false
-    }
+
     return (
         <>
-            <Nav className="">
-                {Object.entries(data).map(([category, items]) => (
-
-                    <div
-                        className="nav-item dropdown"
-                        key={category}
-                        onMouseEnter={()=>showMenu(category,items)}
-                        onMouseLeave={()=>setShow(null)}
+        {Object.entries(data).map(([category, items]) => (
+            <div
+            className="group relative inline-block text-left"
+            key={category}
+            >
+                <Link 
+                href={category} 
+                key={`${category}-menu`} 
+                className="block px-4 py-2 text-gray-700 hover:text-blue-500">
+                {category}
+                </Link>
+                {items.length > 0 && (
+                    <div 
+                    className="hidden group-hover:block absolute top-6 left-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5" 
                     >
+                    {items.map((item) => (
                         <Link 
-                        href={category} 
-                        key={`${category}-menu`} 
-                        className="nav-link dropdown-toggle">
-                            {category}
-                        </Link>
-                        <div className={`dropdown-menu ${show===category ? "show" : ""}`}>
-                            {items.map((item)=> (
-                                <Link 
-                                href={item} 
-                                key={item} 
-                                className="dropdown-item">
-                                    {item}
-                                </Link>
-                            ))}
-                        </div>
-                        
+                        href={item}
+                        key={item}
+                        className="block top-10 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-500"
+                        >{item}</Link>
+                        ))}
                     </div>
-                         
-                   
+                )}
                     
-                ))}
-            </Nav>
+            </div>   
+           
+        ))}
        </>
     )
 }

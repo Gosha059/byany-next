@@ -2,9 +2,11 @@
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
-    display: block;
+    display: inline-block;
     width: 400px;
     height: 38px;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
   }
   
   @media (max-width: 992px) {

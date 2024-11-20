@@ -1,5 +1,4 @@
 import GeneralMenu from "./common-main-nav/general-menu";
-import { Nav } from "react-bootstrap";
 
 type MenuItems = {
     [key: string]: string[];
@@ -15,13 +14,8 @@ const listMenu: MenuItems = {
 
 export default function MainNav() {
     return (
-
-        
-        <div className="collapse navbar-collapse justify-content-end" id="main-nav">
-          <div className="navbar-nav ml-auto pt-1">
-                <GeneralMenu data={listMenu}/>
-          </div>
+        <div className="flex flex-row justify-between gap-10 relative" id="main-nav">
+                <GeneralMenu data={listMenu /* menu for PC and Lg screen*/}/> 
         </div>
-
     )
 }

@@ -1,7 +1,7 @@
 
 import type { Metadata } from "next";
 import Header from "@/components/main/header/header";
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import "./globals.css";
 
 export const metadata: Metadata = {

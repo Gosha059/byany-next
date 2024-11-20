@@ -3,8 +3,7 @@
 import styles  from "./slider-img.module.css";
 import Link from "next/link";
 import { useState } from "react";
-import Carousel from 'react-bootstrap/Carousel';
-import Container from "react-bootstrap/Container";
+
 
 
 
@@ -24,9 +23,9 @@ export default function SliderImg() {
         ];
       return (
         <div className={`${styles.showcase}`}>
-           <Carousel>
+           <div>
       {slides.map((slide, index) => (
-          <Carousel.Item key={index}>
+          <div key={index}>
             <div
               className="carousel-bg"
               style={{
@@ -36,14 +35,14 @@ export default function SliderImg() {
                 height: "700px", // Задайте высоту слайдера
               }}
             >
-              <Container fluid className="carousel-caption">
+              <div className="carousel-caption">
                 <h3>{slide.title}</h3>
                 <p>{slide.description}</p>
-              </Container>
+              </div>
             </div>
-          </Carousel.Item>
+          </div>
         ))}
-      </Carousel>
+      </div>
         </div>
       );
  

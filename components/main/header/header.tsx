@@ -3,31 +3,13 @@ import MainNav from "./main-nav/main-nav"
 
 
 
-const nav = {
-    id: "navbar",
-    classes: "navbar-expand-lg",
-    style: {
-        fontSize: "16px",
-        paddingTop: "12px",
-        paddingBottom: "12px"
-    }
-}
-
-
 export default function Header(): any {
     return(
-        <header>
-            <div 
-            id={nav.id} 
-            style={nav.style} 
-            className={nav.classes} 
-           
-            >
-                <div>
+        <header className="pt-3 pb-3">
+                <nav className="container flex flex-row justify-between mx-auto">
                     <Logo/>
                     <MainNav/>
-                </div>
-            </div>
+                 </nav>
         </header>
     )
 }
