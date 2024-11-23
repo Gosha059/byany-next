@@ -14,7 +14,7 @@ const listMenu: MenuItems = {
 
 export default function MainNav() {
     return (
-        <div className="flex flex-row justify-between gap-10 relative" id="main-nav">
+        <div className=" relative flex flex-row justify-between gap-10 relative " id="main-nav">
                 <GeneralMenu data={listMenu /* menu for PC and Lg screen*/}/> 
         </div>
     )

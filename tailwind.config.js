@@ -10,6 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+
+      transitionDuration: {
+        '2000': '2000ms',
+      },
       container: {
         center: true,
         padding: '1rem'
